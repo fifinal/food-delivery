@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -25,23 +31,24 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="AIzaSyAEexUA7J5o6J5-M4uvuVuYL3JuzFGFs_k" />
+
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".pembeli.MapsActivity"
             android:exported="false"
             android:label="@string/title_activity_maps" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".pembeli.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ProductActivity"
+            android:name=".pembeli.ProductActivity"
             android:exported="false" />
         <activity
-            android:name=".CheckoutActivity"
+            android:name=".pembeli.CheckoutActivity"
             android:exported="false" />
         <activity
-            android:name=".CartActivity"
+            android:name=".pembeli.CartActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"

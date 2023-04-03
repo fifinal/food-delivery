@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.WindowInsets;
 
 import com.example.fooddelivery.databinding.ActivityLandingBinding;
+import com.example.fooddelivery.pembeli.MapsActivity;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -127,6 +129,7 @@ public class LandingActivity extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         binding.dummyButton.setOnTouchListener(mDelayHideTouchListener);
+
     }
 
     @Override
@@ -175,6 +178,13 @@ public class LandingActivity extends AppCompatActivity {
         // Schedule a runnable to display UI elements after a delay
         mHideHandler.removeCallbacks(mHidePart2Runnable);
         mHideHandler.postDelayed(mShowPart2Runnable, UI_ANIMATION_DELAY);
+        binding.dummyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LandingActivity.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     /**
